@@ -1,0 +1,31 @@
+body > .right-container {
+    width: 70%;
+    height: max-content;
+    background-color: var(--first-color);
+    position: relative;
+    padding: 1rem;
+    left: 30%;
+}
+
+.right-container > .main-container {
+    width: 98%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-info {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.section-info > h2 {
+    color: var(--second-color);
+    font-size: 2rem;
+    border-bottom: solid 2px #fff;
+    padding: 1rem;
+}
