@@ -43,18 +43,80 @@ fetch(`${urlBase}pokemon/charmander`)
 // 1- hacer el maquetado de html
 // 2- hacer css
 
-//Efecto evolucionar
+//Efecto evolucionar e involucionar pikachu
 
-const buttonPikachu = document.getElementById('btnEvolucionarPikachu')
+const buttonPikachu = document.getElementById("btnEvolucionarPikachu");
 
-buttonPikachu.addEventListener("click", evolucionarPikachu)
+buttonPikachu.addEventListener("click", evolucionarPikachu);
 
-function evolucionarPikachu(){
-  fetch(`${urlBase}pokemon/raichu`)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data)
-    pikachuImg.setAttribute("src", data.sprites.front_default);
-    buttonPikachu.innerHTML = "Involucionar"
-  })
+function evolucionarPikachu() {
+  if (buttonPikachu.innerHTML === "Evolucionar") {
+    fetch(`${urlBase}pokemon/raichu`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        pikachuImg.setAttribute("src", data.sprites.front_default);
+        buttonPikachu.innerHTML = "Involucionar";
+      });
+  } else if (buttonPikachu.innerHTML === "Involucionar") {
+    fetch(`${urlBase}pokemon/pikachu`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        pikachuImg.setAttribute("src", data.sprites.front_default);
+        buttonPikachu.innerHTML = "Evolucionar";
+      });
+  }
+}
+
+//Efecto evolucionar e involucionar bulbasaur
+
+const buttonBulbasaur = document.getElementById("btnEvolucionarBulbasaur");
+
+buttonBulbasaur.addEventListener("click", evolucionarBulbasaur);
+
+function evolucionarBulbasaur() {
+  if (buttonBulbasaur.innerHTML === "Evolucionar") {
+    fetch(`${urlBase}pokemon/venusaur`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        bulbasaurImg.setAttribute("src", data.sprites.front_default);
+        buttonBulbasaur.innerHTML = "Involucionar";
+      });
+  } else if (buttonBulbasaur.innerHTML === "Involucionar") {
+    fetch(`${urlBase}pokemon/bulbasaur`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        bulbasaurImg.setAttribute("src", data.sprites.front_default);
+        buttonBulbasaur.innerHTML = "Evolucionar";
+      });
+  }
+}
+
+//Efecto evolucionar e involucionar Charmander
+
+const buttonCharmander = document.getElementById("btnEvolucionarCharmander");
+
+buttonCharmander.addEventListener("click", evolucionarCharmander);
+
+function evolucionarCharmander() {
+  if (buttonCharmander.innerHTML === "Evolucionar") {
+    fetch(`${urlBase}pokemon/charizard`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        charmanderImg.setAttribute("src", data.sprites.front_default);
+        buttonCharmander.innerHTML = "Involucionar";
+      });
+  } else if (buttonCharmander.innerHTML === "Involucionar") {
+    fetch(`${urlBase}pokemon/charmander`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        charmanderImg.setAttribute("src", data.sprites.front_default);
+        buttonCharmander.innerHTML = "Evolucionar";
+      });
+  }
 }
