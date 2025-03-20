@@ -56,6 +56,7 @@ function evolucionarPikachu() {
       .then((data) => {
         console.log(data);
         pikachuImg.setAttribute("src", data.sprites.front_default);
+        pikachuName.innerHTML = capitalizeFirstLetter(data.name);
         buttonPikachu.innerHTML = "Involucionar";
       });
   } else if (buttonPikachu.innerHTML === "Involucionar") {
@@ -64,6 +65,7 @@ function evolucionarPikachu() {
       .then((data) => {
         console.log(data);
         pikachuImg.setAttribute("src", data.sprites.front_default);
+        pikachuName.innerHTML = capitalizeFirstLetter(data.name);
         buttonPikachu.innerHTML = "Evolucionar";
       });
   }
@@ -82,6 +84,7 @@ function evolucionarBulbasaur() {
       .then((data) => {
         console.log(data);
         bulbasaurImg.setAttribute("src", data.sprites.front_default);
+        bulbasaurName.innerHTML = capitalizeFirstLetter(data.name);
         buttonBulbasaur.innerHTML = "Involucionar";
       });
   } else if (buttonBulbasaur.innerHTML === "Involucionar") {
@@ -90,6 +93,7 @@ function evolucionarBulbasaur() {
       .then((data) => {
         console.log(data);
         bulbasaurImg.setAttribute("src", data.sprites.front_default);
+        bulbasaurName.innerHTML = capitalizeFirstLetter(data.name);
         buttonBulbasaur.innerHTML = "Evolucionar";
       });
   }
@@ -108,6 +112,7 @@ function evolucionarCharmander() {
       .then((data) => {
         console.log(data);
         charmanderImg.setAttribute("src", data.sprites.front_default);
+        charmanderName.innerHTML = capitalizeFirstLetter(data.name);
         buttonCharmander.innerHTML = "Involucionar";
       });
   } else if (buttonCharmander.innerHTML === "Involucionar") {
@@ -116,6 +121,7 @@ function evolucionarCharmander() {
       .then((data) => {
         console.log(data);
         charmanderImg.setAttribute("src", data.sprites.front_default);
+        charmanderName.innerHTML = capitalizeFirstLetter(data.name);
         buttonCharmander.innerHTML = "Evolucionar";
       });
   }
